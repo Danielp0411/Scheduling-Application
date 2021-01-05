@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.ApptTypeReportController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Rectangle fill="#252525" height="276.0" stroke="WHITE" strokeType="INSIDE" width="455.0" />
+            <TableView fx:id="typeTable" layoutX="234.0" layoutY="88.0" prefHeight="168.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="typeCol" prefWidth="150.0" text="Type" />
+                <TableColumn fx:id="countCol" prefWidth="50.0" text="#" />
+              </columns>
+            </TableView>
+            <Text fill="WHITE" layoutX="86.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appt Type Report">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Line endX="300.0" layoutX="77.0" layoutY="67.0" />
+            <RadioButton fx:id="janRadio" layoutX="22.0" layoutY="88.0" mnemonicParsing="false" onAction="#pullTypeTable" text="January" textFill="#3392e6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="months" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="febRadio" layoutX="22.0" layoutY="118.0" mnemonicParsing="false" onAction="#pullTypeTable" text="February" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="marRadio" layoutX="22.0" layoutY="148.0" mnemonicParsing="false" onAction="#pullTypeTable" text="March" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="aprRadio" layoutX="22.0" layoutY="178.0" mnemonicParsing="false" onAction="#pullTypeTable" text="April" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="mayRadio" layoutX="22.0" layoutY="208.0" mnemonicParsing="false" onAction="#pullTypeTable" text="May" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="junRadio" layoutX="22.0" layoutY="238.0" mnemonicParsing="false" onAction="#pullTypeTable" text="June" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="julRadio" layoutX="113.0" layoutY="88.0" mnemonicParsing="false" onAction="#pullTypeTable" text="July" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="augRadio" layoutX="113.0" layoutY="118.0" mnemonicParsing="false" onAction="#pullTypeTable" text="August" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="sepRadio" layoutX="113.0" layoutY="148.0" mnemonicParsing="false" onAction="#pullTypeTable" text="September" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="octRadio" layoutX="113.0" layoutY="178.0" mnemonicParsing="false" onAction="#pullTypeTable" text="October" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="novRadio" layoutX="113.0" layoutY="208.0" mnemonicParsing="false" onAction="#pullTypeTable" text="November" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="decRadio" layoutX="113.0" layoutY="238.0" mnemonicParsing="false" onAction="#pullTypeTable" text="December" textFill="#3392e6" toggleGroup="$months">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Button layoutX="15.0" layoutY="23.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#goBack" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #252525;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@Images/BackArrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

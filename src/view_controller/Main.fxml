@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_controller.MainController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="550.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Rectangle fill="#252525" height="350.0" layoutY="200.0" stroke="WHITE" strokeType="INSIDE" width="900.0" />
+            <Rectangle fill="#252525" height="201.0" stroke="WHITE" strokeType="INSIDE" width="900.0" />
+            <Text fill="WHITE" layoutX="190.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scheduling Management System">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Button layoutX="10.0" layoutY="10.0" minHeight="56.0" minWidth="50.0" mnemonicParsing="false" onAction="#reports" prefHeight="56.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="36.5">
+                     <image>
+                        <Image url="@Images/Reports.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="240.0" layoutY="129.0" minHeight="56.0" minWidth="56.0" mnemonicParsing="false" onAction="#customer" prefHeight="56.0" prefWidth="56.0">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@Images/Customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="469.0" layoutY="129.0" minHeight="56.0" minWidth="56.0" mnemonicParsing="false" onAction="#addAppt" prefHeight="56.0" prefWidth="56.0">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@Images/addAppointment.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="538.0" layoutY="129.0" minHeight="56.0" minWidth="56.0" mnemonicParsing="false" onAction="#delAppt" prefHeight="56.0" prefWidth="56.0">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@Images/DeleteAppointment.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="607.0" layoutY="129.0" minHeight="56.0" minWidth="56.0" mnemonicParsing="false" onAction="#updtAppt" prefHeight="56.0" prefWidth="56.0">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@Images/ModifyAppointment.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TableView fx:id="tableView" layoutX="100.0" layoutY="200.0" prefHeight="350.0" prefWidth="800.0" style="-fx-background-color: #252525; -fx-border-color: white;">
+              <columns>
+                <TableColumn fx:id="apptIDCol" prefWidth="50.0" text="Appt ID" />
+                  <TableColumn fx:id="custIDCol" prefWidth="50.0" text="Cust ID" />
+                  <TableColumn fx:id="titleCol" prefWidth="100.0" text="Title" />
+                  <TableColumn fx:id="descriptionCol" prefWidth="100.0" text="Description" />
+                  <TableColumn fx:id="locationCol" prefWidth="100.0" text="Location" />
+                  <TableColumn fx:id="typeCol" prefWidth="100.0" text="Type" />
+                  <TableColumn fx:id="startCol" prefWidth="150.0" text="Start" />
+                  <TableColumn fx:id="endCol" prefWidth="150.0" text="End" />
+              </columns>
+            </TableView>
+            <Button layoutX="1.0" layoutY="226.0" minHeight="70.0" minWidth="100.0" mnemonicParsing="false" onAction="#viewAll" prefHeight="70.0" prefWidth="100.0">
+               <graphic>
+                  <ImageView fitHeight="66.5" fitWidth="95.0">
+                     <image>
+                        <Image url="@Images/ViewAll.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="1.0" layoutY="340.0" minHeight="70.0" minWidth="100.0" mnemonicParsing="false" onAction="#viewByWeek" prefHeight="70.0" prefWidth="100.0">
+               <graphic>
+                  <ImageView fitHeight="66.5" fitWidth="95.0">
+                     <image>
+                        <Image url="@Images/ViewbyWeek.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="1.0" layoutY="455.0" minHeight="70.0" minWidth="100.0" mnemonicParsing="false" onAction="#viewByMonth" prefHeight="70.0" prefWidth="100.0">
+               <graphic>
+                  <ImageView fitHeight="66.5" fitWidth="95.0">
+                     <image>
+                        <Image url="@Images/ViewbyMonth.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <DatePicker fx:id="datePicker" layoutX="1.0" layoutY="201.0" prefHeight="25.0" prefWidth="100.0" promptText="Select Date" />
+            <Text fill="#3392e6" layoutX="272.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Office Hours: 8:00 AM to 10:00 PM EST, Monday - Sunday">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
